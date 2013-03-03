@@ -10,7 +10,7 @@ There are two repos:
 
 - [live](https://github.com/associazionepoltronieri/associazionepoltronieri)
 
-The development uses staging repositor, master branch.
+The development uses staging repo, master branch.
 
 To sync the two repos, you need to add the following to the config of the live
 repo:
@@ -21,16 +21,15 @@ repo:
 	fetch = +refs/heads/*:refs/remotes/origin/*
 ```
 
-When you need to sync the live with the staging one, you need to execute the
-following commands:
+When you need to sync the live repo with the staging one, you need to execute
+the following commands:
 
 ```
 git pull staging master
-git pull
 git push
 ```
 
-The live repo has two branches: master and gh-pages.
+The live repo has two branches: `master` and `gh-pages`.
 
-After syncing staging master branch with live master branch, the last ste to go
+After syncing staging master branch with live master one, the last step to go
 live is to merge live master branch with live gh-pages one.
