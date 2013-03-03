@@ -1,2 +1,2 @@
-Associazione Alberto Poltronieri.
-=================================
+Associazione Alberto Poltronieri
+================================
