@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Associazione Alberto Poltronieri">
+    <meta name="author" content="Associazione Alberto Poltronieri">
+    <meta name="keywords" content="associazione, onlus, poltronieri">
+
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+
+    <link href="/css/site.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+
+<body>
+
+<div class="container">
+    <img class="pull-left" src="/img/logo.png" alt="Associazione Alberto Poltronieri" />
+
+    {{content}}
+
+    <hr>
+
+    <footer>
+        <p>Associazione Alberto Poltronieri - Via G. Rossini, 8 - 20122 - Milano - C.F. 97415630157</p>
+    </footer>
+
+</div>
+
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/bootstrap-2.3.1.min.js"></script>
+<script src="/assets/js/jquery.fortune-0.8.js"></script>
+<script src="/assets/js/jquery.demunger-1.0.2.js"></script>
+<script>
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+
+    $('#my-cookie-element').fortune();
+
+    $('.button-donazioni').on('shown', function (e) {
+        // console.log(e.target); // activated tab
+        // console.log(e.relatedTarget); // previous tab
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        if (!e.relatedTarget) {
+            $('li > a').parent().removeClass('active');
+            $('li > a[href="#donazioni"]').parent().addClass('active');
+        }
+    });
+
+    $('.email-address').demunge({
+        munging: 'reverse',
+        mailTo: true
+    });
+
+    $("a[data-toggle=popover]")
+        .popover({
+            html: true
+        })
+        .click(function(e) {
+            e.preventDefault()
+        });
+</script>
+
+</body>
+</html>
+
