@@ -80,9 +80,9 @@
             e.preventDefault()
         });
 
-        $('ul.nav li > a').on('click', function (e) {
-            console.log(e);
-        })
+    $('ul.nav li > a').on('click', function (e) {
+        $(e.target).parent().addClass('active');
+    })
 </script>
 
 </body>
