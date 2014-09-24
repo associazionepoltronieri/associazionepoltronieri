@@ -1,0 +1,20 @@
+{
+    "name": "associazionepoltronieri",
+    "version": "1.5.0",
+    "description": "Associazione Poltronieri",
+    "main": "Gruntfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "Associazione",
+        "Poltronieri"
+    ],
+    "author": "Associazione Poltronieri",
+    "license": "MIT",
+    "homepage": "http://www.associazionepoltronieri.org",
+    "devDependencies": {
+        "grunt": "^0.4.5",
+        "grunt-html-validation": "^0.1.18"
+    }
+}
