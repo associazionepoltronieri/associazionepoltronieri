@@ -17,12 +17,26 @@ module.exports = function (grunt) {
                     "_site/*.html"
                 ]
             }
+        },
+
+        bootlint: {
+            options: {
+                stoponerror: false,
+                relaxerror: [
+                    "W005" // Found what might be an outdated version of jQuery;
+                ]
+            },
+            files: [
+                "_site/*.html"
+            ]
         }
     });
 
     grunt.loadNpmTasks("grunt-html-validation");
+    grunt.loadNpmTasks("grunt-bootlint");
 
     grunt.registerTask("default", [
-        "validation"
+        "validation",
+        "bootlint"
     ]);
 };
