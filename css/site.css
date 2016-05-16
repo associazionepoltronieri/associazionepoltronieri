@@ -175,3 +175,7 @@ footer {
 .mdl-card__title-text {
     text-align: justify;
 }
+
+.mdl-card__media {
+    background-color: white;
+}
